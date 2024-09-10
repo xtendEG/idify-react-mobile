@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Mona Sans";
+    src: url("./assets/fonts/mona-sans/Mona-Sans.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Mona Sans";
+    src: url("./assets/fonts/mona-sans/Mona-Sans-Light.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Mona Sans";
+    src: url("./assets/fonts/mona-sans/Mona-Sans-Medium.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Mona Sans";
+    src: url("./assets/fonts/mona-sans/Mona-Sans-Bold.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Mona Sans";
+    src: url("./assets/fonts/mona-sans/Mona-Sans-SemiBold.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
