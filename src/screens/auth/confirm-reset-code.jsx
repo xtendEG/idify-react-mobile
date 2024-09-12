@@ -24,7 +24,7 @@ const ConfirmResetCode = () => {
           </Link>
         </p>
         <Link to={"/auth/reset-password"}>
-        <Button label="Recover Password" /></Link>
+        <Button label="Recover Password"  attr={{ className: "text-white mt-8 mb-5" }}/></Link>
       </form>
     </div>
   );

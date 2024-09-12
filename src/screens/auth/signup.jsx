@@ -3,16 +3,15 @@ import InputField, {
   CustomCheckbox,
   PasswordInputField,
 } from "../../components/auth/input-fields";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Button } from "../../components/common/button";
 import Divider from "../../components/auth/divider";
 import { SocialIcons } from "../../components/auth/providers";
 import Heading from "../../components/common/heading";
 const Signup = () => {
-  const navigate = useNavigate();
   return (
     <div className="font-mona py-10 px-4">
-      <Heading heading="Sign Up" returnFn={() => navigate(-1)} />
+      <Heading heading="Sign Up"  />
       <form className="mt-5">
         <InputField label="Full Name" placeholder="Enter Your Full Name" />
         <InputField label="Email" placeholder="Enter Your Email Address" />
@@ -40,7 +39,7 @@ const Signup = () => {
           }
           id="checkbox"
         />
-        <Button label="Sign Up" />
+        <Button attr={{ className: "mt-8 mb-5 text-white" }} label="Sign Up" />
         <Divider text="Or" />
         <SocialIcons method="Sign Up" />
 

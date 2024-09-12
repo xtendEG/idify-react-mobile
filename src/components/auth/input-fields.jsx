@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const TextInputField = ({ label, placeholder, extraComponent }) => {
+const TextInputField = ({ label, placeholder }) => {
   return (
     <div className="flex flex-col gap-2 mt-2">
       <label className=" text-[16px] font-medium lead">

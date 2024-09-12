@@ -1,7 +1,7 @@
-import google from "../../assets/google.svg";
-import facebook from "../../assets/facebook.svg";
-import apple from "../../assets/apple.svg";
-import twitter from "../../assets/twitter.svg";
+import google from "../../assets/images/social/google.svg";
+import facebook from "../../assets/images/social/facebook.svg";
+import apple from "../../assets/images/social/apple.svg";
+import twitter from "../../assets/images/social/twitter.svg";
 export const SocialIcons = ({ method }) => (
   <div>
     <p className="text-center text-[14px] font-semibold mt-4">{method} With</p>

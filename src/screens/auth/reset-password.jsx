@@ -20,7 +20,7 @@ const ResetPassword = () => {
           placeholder="Enter Your Password"
           subtitle="At least 8 characters"
         />{" "}
-        <Button label="Save" />
+        <Button attr={{ className: "mt-8 mb-5 text-white" }} label="Save" />
       </form>
     </div>
   );

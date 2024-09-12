@@ -18,7 +18,7 @@ const ForgetPassword = () => {
         <TextInputField label="Email" placeholder="Enter Your Email Address" />
         {/* Link just for testing */}
         <Link to={"/auth/confirm-reset-code"}>
-          <Button label="Recover Password" />
+          <Button attr={{ className: "mt-8 mb-5 text-white" }} label="Recover Password" />
         </Link>
       </form>
     </div>

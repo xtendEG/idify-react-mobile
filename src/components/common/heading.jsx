@@ -1,9 +1,11 @@
 import React from "react";
-import arrow from "../../assets/arrow.svg";
+import arrow from "../../assets/images/arrow.svg";
+import { useNavigate } from "react-router-dom";
 const Heading = ({ heading, returnFn }) => {
+  const navigate = useNavigate();
   return (
-    <div className="relative flex justify-center">
-      <button onClick={returnFn}>
+    <div className="relative flex justify-center w-full">
+      <button onClick={returnFn || (() => navigate(-1))}>
         <img
           src={arrow}
           alt="arrow"

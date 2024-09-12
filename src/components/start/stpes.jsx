@@ -1,10 +1,10 @@
 import React from "react";
-import step1 from "../../assets/step-1.png";
-import step2 from "../../assets/step-2.png";
-import step3 from "../../assets/step-3.png";
+import step1 from "../../assets/images/home/step-1.png";
+import step2 from "../../assets/images/home/step-2.png";
+import step3 from "../../assets/images/home/step-3.png";
 import { Button } from "../common/button";
 import { useNavigate } from "react-router-dom";
-import arrow from "../../assets/arrow.svg";
+import arrow from "../../assets/images/arrow.svg";
 const Stpes = () => {
   const StepArr = [
     {
@@ -61,6 +61,7 @@ const Stpes = () => {
         bg="bg-[#151412]"
         attr={{
           onClick: handleNext,
+          className: "mt-8 mb-5 text-white",
         }}
       />
       {step > 0 && (

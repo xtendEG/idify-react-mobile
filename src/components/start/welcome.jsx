@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/images/logo.png";
 import { Button } from "../common/button";
 import { Link, useNavigate } from "react-router-dom";
 const Welcome = () => {
@@ -21,13 +21,14 @@ const Welcome = () => {
       <div className="w-full ">
         <Button
           label="Sign In"
-          attr={{ onClick: () => navigate("/auth/login") }}
+          attr={{ onClick: () => navigate("/auth/login"), className: "mt-8 text-white" }}
+
         />
         <Button
           label="Sign Up"
           attr={{
             className:
-              "border-primary border-[1px] bg-transparent text-primary -mt-1",
+              "border-primary border-[1px] bg-transparent text-primary mt-6 mb-5",
             onClick: () => navigate("/auth/signup"),
           }}
         />
