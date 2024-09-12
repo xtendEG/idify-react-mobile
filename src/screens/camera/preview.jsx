@@ -6,14 +6,14 @@ import CameraArrow from "../../components/camera/camera-arrow";
 const Preview = () => {
   const navigate = useNavigate();
   return (
-    <div className="flex flex-col justify-between h-screen ">
+    <div className="flex flex-col justify-between h-screen pb-20 bg-[#151412]">
       <div className="px-3 pt-12 py-10 bg-[#151412]">
         <CameraArrow  />
       </div>
-      <div className="grow">
+      <div className="grow bg-white">
         <img src={person} alt="" />
       </div>
-      <div className="bg-[#151412] pt-14 pb-20 px-3">
+      <div className="bg-[#151412] pt-14  px-3">
         <Button
           label="Remove Background"
           attr={{ className: "w-full text-white" }}

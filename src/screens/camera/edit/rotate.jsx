@@ -34,13 +34,14 @@ const Rotate = () => {
   ];
   const [imageRotate, setImageRotate] = useState(imageRotates[0]);
   return (
-    <div className="font-mona flex flex-col justify-between h-screen bg-[#151412]">
+    <div className="font-mona flex flex-col justify-between h-screen pb-10 bg-[#151412]">
       <Heading />
       <div className="grow flex justify-center bg-white">
         <img src={person} alt="" className="h-[483px]" />
       </div>
-      <div className="bg-[#151412] py-10 px-2">
-        <div className="flex items-center justify-center gap-[28px] overflow-auto">
+      <div className="bg-[#151412] pt-10 px-2">
+       <div className="flex justify-center">
+       <div className="flex items-center  mx-auto gap-[28px] overflow-scroll">
           {imageRotates.map((action) => (
             <ActionBox
               key={action.actionName}
@@ -53,6 +54,7 @@ const Rotate = () => {
             />
           ))}
         </div>
+       </div>
         <Footer action={"Rotate"} />
       </div>
     </div>

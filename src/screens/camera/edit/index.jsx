@@ -66,7 +66,7 @@ const Edit = () => {
   };
   // const [confirmDialog, setConfirmDialog] = useState(true);
   return (
-    <div className="font-mona flex flex-col justify-between h-screen bg-[#151412]">
+    <div className="font-mona flex flex-col justify-between h-screen pb-10 bg-[#151412]">
       {/* <ConfirmDialog
         isDialogOpen={confirmDialog}
         setIsDialogOpen={setConfirmDialog}
@@ -79,7 +79,7 @@ const Edit = () => {
 
       <div
         className={`bg-[#151412]  px-4 ${
-          samePageEdit.open ? "pb-7 pt-7" : "pb-16 pt-12 "
+          samePageEdit.open ? " pt-7" : " pt-12 "
         } `}
       >
         {samePageEdit.open && samePageEdit.actionName === "Resize" && (
@@ -114,7 +114,7 @@ export default Edit;
 
 const Resize = () => {
   return (
-    <div className="flex mb-5 justify-between px-10">
+    <div className="flex mb-5 justify-between px-8 gap-4">
       <div className="flex gap-3 items-center ">
         <h6 className="text-white text-3">Width</h6>
         <input
