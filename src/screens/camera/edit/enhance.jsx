@@ -6,7 +6,7 @@ import Slider from "../../../components/common/slider";
 import smArrow from "../../../assets/images/camera/small-arrow.svg";
 const Enhance = () => {
   return (
-    <div className="font-mona flex flex-col justify-between h-screen pb-10 bg-[#151412]">
+    <div className="font-mona flex flex-col justify-between h-screen  bg-[#151412]">
       <Heading />
       <div className="grow flex justify-center bg-white items-end relative">
         <img src={person} alt="" className="h-[485px]" />
@@ -20,7 +20,7 @@ const Enhance = () => {
         <span className="absolute top-4 flex items-center justify-center rounded-full text-white  w-[66px] bg-[#151412B2] left-6">Before</span>
         <span className="absolute top-4 flex items-center justify-center rounded-full text-white  w-[66px] bg-[#151412B2] right-6">After</span>
       </div>
-      <div className="bg-[#151412] pt-10 px-2">
+      <div className="bg-[#151412] py-10 px-2">
         <Slider />
 
         <Footer action={"Adjust"} />

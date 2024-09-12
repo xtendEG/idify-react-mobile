@@ -79,7 +79,7 @@ const Edit = () => {
 
       <div
         className={`bg-[#151412]  px-4 ${
-          samePageEdit.open ? " pt-7" : " pt-12 "
+          samePageEdit.open ? " pt-7 pb-7" : " pt-12 pb-10"
         } `}
       >
         {samePageEdit.open && samePageEdit.actionName === "Resize" && (

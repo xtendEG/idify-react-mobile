@@ -35,12 +35,12 @@ const Adjust = () => {
     const [adjustOption, setAdjustOption] = useState(adjustOptions[0]);
 
   return (
-    <div className="font-mona flex flex-col justify-between h-screen pb-10 bg-[#151412]">
+    <div className="font-mona flex flex-col justify-between h-screen  bg-[#151412]">
       <Heading  />
       <div className="grow flex justify-center bg-white items-end">
         <img src={person} alt="" className="h-[485px]" />
       </div>
-      <div className="bg-[#151412] pt-10 px-2">
+      <div className="bg-[#151412] py-10 px-2">
         <Slider/>
        <div className="flex justify-center">
 
