@@ -26,7 +26,7 @@ const Signup = () => {
         />
         <CustomCheckbox
           label={
-            <span className="text-[14px] leading-[20px] -mt-[4px]">
+            <span className="text-3 leading-[20px] -mt-[4px]">
               I accept and agree to comply with Idify’s{" "}
               <Link to={"/"} className="underline font-semibold">
                 Terms and Conditions
@@ -43,7 +43,7 @@ const Signup = () => {
         <Divider text="Or" />
         <SocialIcons method="Sign Up" />
 
-        <p className="text-center text-[14px] font-semibold mt-4">
+        <p className="text-center text-3 font-semibold mt-4">
           Already have an account?{" "}
           <Link to={"/auth/login"} className="underline font-semibold">
             Sign In

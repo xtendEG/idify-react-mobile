@@ -4,7 +4,7 @@ import apple from "../../assets/images/social/apple.svg";
 import twitter from "../../assets/images/social/twitter.svg";
 export const SocialIcons = ({ method }) => (
   <div>
-    <p className="text-center text-[14px] font-semibold mt-4">{method} With</p>
+    <p className="text-center text-3 font-semibold mt-4">{method} With</p>
     <div className="flex justify-center items-center gap-8 mt-8 mb-8">
       <button>
         <img src={facebook} alt="facebook" />

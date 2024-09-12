@@ -11,8 +11,8 @@ export default {
         ...defaultTheme.colors,
         primary: "#1CD29B",
       },
-      fontfamily: {
-        mona: ["Mona Sans", ...defaultTheme.fontFamily.sans],
+      fontFamily: {
+        mona: ['Mona Sans', ...defaultTheme.fontFamily.sans],
       },
       boxShadow: {
         'custom': '0px 0px 4px 0px rgba(0, 0, 0, 0.10)',
@@ -23,6 +23,14 @@ export default {
       },
       backgroundImage: {
         'custom-gradient': 'linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, #FFFFFF 100%)',
+      },
+      fontSize: {
+        "1": "10px",
+        "2": "12px",
+        "3": "14px",
+        "4": "16px",
+        "5": "18px",
+        "6": "20px",
       },
     },
     

@@ -21,14 +21,14 @@ const Login = () => {
         <div className="flex justify-between items-center">
           <CustomCheckbox
             label={
-              <span className="text-[14px] leading-[20px] ">Remember Me</span>
+              <span className="text-3 leading-[20px] ">Remember Me</span>
             }
             id="checkbox"
           />
 
           <Link
             to={"/auth/forgot-password"}
-            className="text-[14px] leading-[20px] font-semibold underline mt-2"
+            className="text-3 leading-[20px] font-semibold underline mt-2"
           >
             Forgot Password?
           </Link>
@@ -37,7 +37,7 @@ const Login = () => {
         <Divider text="Or" />
         <SocialIcons method="Sign Up" />
 
-        <p className="text-center text-[14px] font-semibold mt-4">
+        <p className="text-center text-3 font-semibold mt-4">
           Don’t have an account?{" "}
           <Link to={"/auth/signup"} className="underline font-semibold">
             Sign Up

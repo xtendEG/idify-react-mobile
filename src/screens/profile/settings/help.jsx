@@ -28,7 +28,7 @@ const Help = () => {
   return (
     <div className="font-mona py-10 px-4 pb-20">
       <Heading heading="Privacy Policy" />{" "}
-      <div className="mt-5 font-light text-[14px] leading-[30px] ">
+      <div className="mt-5 font-light text-3 leading-[30px] ">
         <p>
           Welcome to the Help & Support section. We're here to assist you and
           provide answers to commonly asked questions. If you can't find the
@@ -41,7 +41,7 @@ const Help = () => {
             <AccordionItem
               key={index}
               titleSection={
-                <h4 className="text-[12px] leading-[11.6px] font-medium">
+                <h4 className="text-2 leading-[11.6px] font-medium">
                   {item.title}
                 </h4>
               }
@@ -49,7 +49,7 @@ const Help = () => {
             />
           ))}
         </Accordion>
-        <div className="text-[14px] leading-[20px] font-light max-w-[320px]">
+        <div className="text-3 leading-[20px] font-light max-w-[320px]">
           <h3 className="my-4 font-medium">Contacting Support</h3>
           <p>
             If you have any further questions or require assistance, our support

@@ -35,7 +35,7 @@ const Languages = () => {
           >
             <div className="flex items-center gap-2">
               <Radio isSelected={language.name == selectedLanguage} />
-              <h3 className="text-[14px] font-medium">{language.name}</h3>
+              <h3 className="text-3 font-medium">{language.name}</h3>
             </div>
             <img src={language.flag} alt="" />
           </div>

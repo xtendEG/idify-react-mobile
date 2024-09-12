@@ -12,7 +12,7 @@ const Heading = ({ heading, returnFn }) => {
           className="absolute left-0 top-1/2 -translate-y-1/2"
         />
       </button>
-      <h1 className="text-[20px] font-semibold leading-[19.34px]">{heading}</h1>
+      <h1 className="text-6 font-semibold leading-[19.34px]">{heading}</h1>
     </div>
   );
 };

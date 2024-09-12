@@ -12,8 +12,8 @@ const ReplyThread = () => {
         <div className="flex-grow ml-4">
           <div className="flex items-center justify-between">
             <div>
-              <div className="text-[14px] font-semibold">Abdullah Soliman</div>
-              <div className="text-[12px] text-[#9D9D9D]">
+              <div className="text-3 font-semibold">Abdullah Soliman</div>
+              <div className="text-2 text-[#9D9D9D]">
                 12 Jul 2024 • 9 AM
               </div>
             </div>
@@ -22,7 +22,7 @@ const ReplyThread = () => {
               <Reply />
             </div>
           </div>
-          <p className="mt-1 text-[12px] font-light leading-[20px]">
+          <p className="mt-1 text-2 font-light leading-[20px]">
             Lorem ipsum dolor sit amet. Quo quis voluptas ut perspiciatis odit
             est molestiae quia aut veniam dolores ad galisum nemo.
           </p>
@@ -38,7 +38,7 @@ const ReplyThread = () => {
           <div className="flex items-center justify-between">
             <div>
               <div className="text-sm font-semibold">Mohamed Khaled</div>
-              <div className="text-[12px] text-[#9D9D9D]">
+              <div className="text-2 text-[#9D9D9D]">
                 12 Jul 2024 • 9 AM
               </div>
             </div>

@@ -4,7 +4,7 @@ const SearchInput = () => {
         <input
           type="text"
           placeholder={"Search"}
-          className="border-[1px] border-[#D7D7D7] placeholder:text-[#D7D7D7] placeholder:text-[16px] rounded-full w-full h-[60px] px-10 focus-visible:outline-[#0073E7]"
+          className="border-[1px] border-[#D7D7D7] placeholder:text-[#D7D7D7] placeholder:text-4 rounded-full w-full h-[60px] px-10 focus-visible:outline-[#0073E7]"
         />
         <button className="absolute left-5 top-1/2 -translate-y-1/2">
           <svg

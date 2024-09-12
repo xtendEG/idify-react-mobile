@@ -113,19 +113,15 @@ const Ticket = ({ title, date, description, status, id }) => {
       className="block py-4 border-b-[1px] border-[#D7D7D7]"
     >
       <div className="flex items-center justify-between mb-4">
-        <h2 className="text-[14px] font-medium leading-[16.8px] tracking-[-0.28px]">
+        <h2 className="text-3 font-medium leading-[16.8px] tracking-[-0.28px]">
           {title}
         </h2>
-        <h6 className="text-[12px] font-light  ">{date}</h6>
+        <h6 className="text-2 font-light  ">{date}</h6>
       </div>
-      <div className="flex items-center justify-between">
-        <p className="text-[12px] font-light leading-[17.302px] tracking-[-0.24px] text-[#303030]">
-          {description.length > 50
-            ? description.slice(0, 50) + "..."
-            : description}
-        </p>
+      {/* <div className="fldex dadfd-between"> */}
+    
         <Status status={status} />
-      </div>
+      {/* </div> */}
     </Link>
   );
 };

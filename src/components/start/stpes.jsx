@@ -46,7 +46,7 @@ const Stpes = () => {
           <h2 className="text-[24px] leading-[28.8px] tracking-[-0.48px] font-medium my-5 ">
             {StepArr[step].title}
           </h2>
-          <p className="text-[14px] leading-[16.8px] tracking-[-0.28px] font-light max-w-[228px] mx-auto">
+          <p className="text-3 leading-[16.8px] tracking-[-0.28px] font-light max-w-[228px] mx-auto">
             {StepArr[step].subtitle}
           </p>
         </div>

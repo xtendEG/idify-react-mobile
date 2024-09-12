@@ -48,39 +48,39 @@ const Terms = () => {
         " These Terms shall be governed by and construed in accordance with the laws of [Jurisdiction]. Any disputes arising out of or in connection with these Terms shall be subject to the exclusive jurisdiction of the courts of [Jurisdiction].",
     },
   ];
-  const classes =
-    "my-10 rounded-full py-3 px-8 font-mona font-medium text-[16px] leading-[16.8px] tracking-[-2%]";
+
   return (
     <div className="flex flex-col min-h-screen font-mona">
-    <div className="flex-grow overflow-auto pb-[100px]"> 
-      <div className="py-10 px-4">
-        <Heading heading="Terms and Conditions"  />
-        <div className="mt-5 font-light text-[14px] leading-[30px]">
-          {terms.map((term, index) => (
-            <div key={term.title} className="mb-4">
-              <h3 className="font-medium">
-                {index + 1}. {term.title}
-              </h3>
-              <p className="max-w-[353px] ps-2">
-                {term.subtitle}
-              </p>
-            </div>
-          ))}
+      <div className="flex-grow overflow-auto pb-[100px]">
+        <div className="py-10 px-4">
+          <Heading heading="Terms and Conditions" />
+          <div className="mt-5 font-light text-3 leading-[30px]">
+            {terms.map((term, index) => (
+              <div key={term.title} className="mb-4">
+                <h3 className="font-medium">
+                  {index + 1}. {term.title}
+                </h3>
+                <p className="max-w-[353px] ps-2">{term.subtitle}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
+      <Actions />
     </div>
-    <div className="fixed bottom-0 left-0 right-0 flex items-center justify-between px-14  bg-custom-gradient">
-      <button
-        className={`${classes} text-primary border-[1px] border-primary`}
-      >
-        Decline
-      </button>
-      <button className={`${classes} bg-primary text-white`}>
-        Accept
-      </button>
-    </div>
-  </div>
   );
 };
 
 export default Terms;
+export const Actions = () => {
+  const classes =
+    "my-10 rounded-full py-3 px-8 font-mona font-medium text-4 leading-[16.8px] tracking-[-2%]";
+  return (
+    <div className="fixed bottom-0 left-0 right-0 flex items-center justify-between px-14  bg-custom-gradient">
+      <button className={`${classes} text-primary border-[1px] border-primary`}>
+        Decline
+      </button>
+      <button className={`${classes} bg-primary text-white`}>Accept</button>
+    </div>
+  );
+};

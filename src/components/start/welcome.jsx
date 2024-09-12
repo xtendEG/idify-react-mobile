@@ -11,7 +11,7 @@ const Welcome = () => {
         <h2 className="text-[24px] leading-[28.8px] tracking-[-0.48px] font-medium mt-16 mb-8">
           Welcome to Idify
         </h2>
-        <p className="text-[14px] leading-[16.8px] tracking-[-0.28px] font-light max-w-[265px] mx-auto text-center">
+        <p className="text-3 leading-[16.8px] tracking-[-0.28px] font-light max-w-[265px] mx-auto text-center">
           Thank you for choosing our app! Get ready to embark on an incredible
           journey. Sign in now to unlock a seamless and enriching user
           experience.
@@ -34,7 +34,7 @@ const Welcome = () => {
         />
 
         <Link
-          className="text-[14px] leading-[16.8px] tracking-[-0.28px] font-medium block text-center text-primary "
+          className="text-3 leading-[16.8px] tracking-[-0.28px] font-medium block text-center text-primary "
           to="/"
         >
           Continue As A Guest

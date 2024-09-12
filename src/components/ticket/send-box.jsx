@@ -8,7 +8,7 @@ const SendBox = () => {
         <input
           type="text"
           placeholder={"Reply with a message"}
-          className="border-[1px] w-full  border-[#D7D7D7] placeholder:text-[#D7D7D7] placeholder:text-[16px] rounded-full  h-[53px] px-6 focus-visible:outline-[#0073E7]"
+          className="border-[1px] w-full  border-[#D7D7D7] placeholder:text-[#D7D7D7] placeholder:text-4 rounded-full  h-[53px] px-6 focus-visible:outline-[#0073E7]"
         />
         {/*  should add input file here */}
         <img
@@ -19,7 +19,7 @@ const SendBox = () => {
       </div>
 
       <button className="flex items-center gap-2 bg-primary text-white px-6 py-4 rounded-full font-mona">
-        <span className="text-[14px] font-medium leading-[16.8px] tracking-[-0.28px]">
+        <span className="text-3 font-medium leading-[16.8px] tracking-[-0.28px]">
           Send
         </span>
         <img src={send} alt="" />

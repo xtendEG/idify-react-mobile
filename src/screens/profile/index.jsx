@@ -28,7 +28,7 @@ const Profile = () => {
     },
     {
       title: "History",
-      to: "/profile/about",
+      to: "/profile/history",
       icon: recentlyViewed,
     },
   ];
@@ -39,8 +39,8 @@ const Profile = () => {
       <div className="mt-[64px]">
         <img src={avatar} alt="" className="rounded-full mx-auto " />
         <div className="text-center">
-          <h2 className="text-[18px] font-medium mt-4 mb-2">Mohamed Khaled</h2>
-          <p className="text-[14px] font-light">mohamed.khaled@gmail.com</p>
+          <h2 className="text-5 font-medium mt-4 mb-2">Mohamed Khaled</h2>
+          <p className="text-3 font-light">mohamed.khaled@gmail.com</p>
         </div>
       </div>
       <div className="mt-10">
@@ -55,7 +55,7 @@ const Profile = () => {
                 <div className="flex items-center justify-center w-[32px] h-[32px] shadow-custom bg-white rounded-full ">
                   <img src={link.icon} alt="" />
                 </div>
-                <h3 className="text-[14px]">{link.title}</h3>
+                <h3 className="text-3">{link.title}</h3>
               </div>
               <SmallArrow className={"rotate-[270deg]"} />
             </Link>
@@ -65,7 +65,7 @@ const Profile = () => {
                 <div className="flex items-center justify-center w-[32px] h-[32px] shadow-custom bg-white rounded-full ">
                   <img src={link.icon} alt="" />
                 </div>
-                <h3 className="text-[14px]">{link.title}</h3>
+                <h3 className="text-3">{link.title}</h3>
               </div>
               <Switching />
             </div>
@@ -73,7 +73,7 @@ const Profile = () => {
         )}
           <Link to="/auth/login" className=" mt-16 flex gap-2 px-1">
             <img src={logout} alt="" />
-            <h3 className="text-[14px]">Logout</h3>
+            <h3 className="text-3">Logout</h3>
         </Link>
       </div>
     </div>

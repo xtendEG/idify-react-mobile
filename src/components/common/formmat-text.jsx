@@ -1,4 +1,4 @@
-const StructuredTextDisplay = ({ text }) => {
+const StructuredTextDisplay = ({ text, className }) => {
     const formatText = (inputText) => {
       const lines = inputText.split('\n');
       
@@ -39,7 +39,7 @@ const StructuredTextDisplay = ({ text }) => {
     };
   
     return (
-      <div className="text-[14px] ps-2" dangerouslySetInnerHTML={{ __html: formatText(text) }} />
+      <div className={className} dangerouslySetInnerHTML={{ __html: formatText(text) }} />
     );
   };
   

@@ -10,7 +10,7 @@ import health from "../assets/images/home/health.svg";
 import license from "../assets/images/home/license.svg";
 import AccordionItem, { Accordion } from "../components/common/accordion";
 import SearchInput from "../components/common/search-input";
-export const Home = () => {
+ const Home = () => {
   const desc = `Size: The photo should be 4 cm x 6 cm
 Color and Background: The photo should be in color, with a white or off-white background. The background should be plain and without any patterns or shadows.
 Head Position: The head should be directly facing the camera, with the face fully visible. The head should not be tilted or turned in any direction. Both ears should be visible.
@@ -75,7 +75,7 @@ Photo Quality: The photo should be of high quality, with good resolution and sha
                   <div className="w-[26px] h-[26px] rounded-full bg-[#EFFFF8] flex items-center justify-center">
                     <img src={service.svg} alt="" />
                   </div>
-                  <h2 className="text-[14px] font-medium">{service.title}</h2>
+                  <h2 className="text-3 font-medium">{service.title}</h2>
                 </div>
               }
             />
@@ -85,3 +85,5 @@ Photo Quality: The photo should be of high quality, with good resolution and sha
     </div>
   );
 };
+
+export default Home;

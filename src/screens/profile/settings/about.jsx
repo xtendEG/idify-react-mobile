@@ -12,7 +12,7 @@ const About = () => {
   return (
     <div className="relative font-mona py-10 px-4 font-mona">
       <Heading heading={"About"}  />
-      <div className="mt-5 font-light text-[14px] leading-[30px]">
+      <div className="mt-5 font-light text-3 leading-[30px]">
         <p>
           Idify is a secure mobile application designed to assist you in editing
           and enhancing images of government documents. Our app provides a

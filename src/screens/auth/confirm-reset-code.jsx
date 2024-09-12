@@ -17,7 +17,7 @@ const ConfirmResetCode = () => {
       />
       <form className="mt-5">
       <PinInput length={4} onComplete={() => console.log("complete")} />
-      <p className="text-center text-[16px] font-semibold mt-4">
+      <p className="text-center text-4 font-semibold mt-4">
           Didn’t receive it? {" "}
           <Link to={"/auth/signup"} className="underline font-semibold">
             Resend

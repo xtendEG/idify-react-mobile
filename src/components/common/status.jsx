@@ -1,36 +1,31 @@
 const Status = ({ status }) => {
-  const getStatus = (status) => {
-    switch (status) {
-      case "open":
-        return {
-          color: "text-[#058550]",
-          bg: "bg-[#EFFFF8]",
-        };
-      case "pending":
-        return {
-          color: "text-[#0073E7]",
-          bg: "bg-[#ECFDFF]",
-        };
-      case "closed":
-        return {
-          color: "text-[#D83C53]",
-          bg: "bg-[#FFEBEB]",
-        };
-      default:
-        return {
-          color: "text-[#058550]",
-          bg: "bg-[#EFFFF8]",
-        };
-    }
+  const statusStyles = {
+    open: {
+      color: "text-[#058550]",
+      bg: "bg-[#EFFFF8]",
+    },
+    pending: {
+      color: "text-[#0073E7]",
+      bg: "bg-[#ECFDFF]",
+    },
+    closed: {
+      color: "text-[#D83C53]",
+      bg: "bg-[#FFEBEB]",
+    },
+    default: {
+      color: "text-[#058550]", 
+      bg: "bg-[#EFFFF8]",
+    },
   };
+
+  const { color, bg } = statusStyles[status] || statusStyles.default;
+
   return (
-    <div
-      className={`text-[10px] font-medium leading-[12px] tracking-[-0.2px] ${
-        getStatus(status).bg
-      } ${getStatus(status).color}  rounded-full px-2 py-[5px]`}
+    <span
+      className={` inline-flex items-center px-2 py-1 text-[10px] font-medium rounded-full ${bg} ${color} `}
     >
       {status}
-    </div>
+    </span>
   );
 };
 

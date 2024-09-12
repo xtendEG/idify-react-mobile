@@ -4,7 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 const Navbar = () => {
   const pathname = useLocation().pathname;
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 h-[86px] flex items-end justify-between font-mona py-5 px-8 shadow-custom  bg-white">
+    <div className="fixed bottom-0 left-0 right-0 z-50 h-[86px] flex items-end justify-between font-mona py-5 px-12 shadow-custom  bg-white">
       <Link
         to={"/"}
         className={`flex flex-col items-center ${
@@ -12,7 +12,7 @@ const Navbar = () => {
         }`}
       >
         <Home pathname={pathname} />
-        <span className="text-[14px] font-medium">Home</span>
+        <span className="text-3 font-medium">Home</span>
       </Link>
 
       <Link>Create</Link>
@@ -24,7 +24,7 @@ const Navbar = () => {
         }`}
       >
         <Profile pathname={pathname} />
-        <span className="text-[14px] font-medium">Profile</span>
+        <span className="text-3 font-medium">Profile</span>
       </Link>
       <Plus />
     </div>
@@ -95,18 +95,20 @@ const Plus = () => {
     <>
       {" "}
       <div className="absolute -top-6 left-1/2  -translate-x-1/2 z-10 flex items-center justify-center w-[58px] h-[58px] rounded-full bg-primary">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="32"
-          height="32"
-          viewBox="0 0 32 32"
-          fill="none"
-        >
-          <path
-            d="M24.0003 17.3307H17.3337V23.9974C17.3337 24.351 17.1932 24.6902 16.9431 24.9402C16.6931 25.1903 16.3539 25.3307 16.0003 25.3307C15.6467 25.3307 15.3076 25.1903 15.0575 24.9402C14.8075 24.6902 14.667 24.351 14.667 23.9974V17.3307H8.00033C7.6467 17.3307 7.30757 17.1903 7.05752 16.9402C6.80747 16.6902 6.66699 16.351 6.66699 15.9974C6.66699 15.6438 6.80747 15.3046 7.05752 15.0546C7.30757 14.8045 7.6467 14.6641 8.00033 14.6641H14.667V7.9974C14.667 7.64377 14.8075 7.30463 15.0575 7.05459C15.3076 6.80454 15.6467 6.66406 16.0003 6.66406C16.3539 6.66406 16.6931 6.80454 16.9431 7.05459C17.1932 7.30463 17.3337 7.64377 17.3337 7.9974V14.6641H24.0003C24.3539 14.6641 24.6931 14.8045 24.9431 15.0546C25.1932 15.3046 25.3337 15.6438 25.3337 15.9974C25.3337 16.351 25.1932 16.6902 24.9431 16.9402C24.6931 17.1903 24.3539 17.3307 24.0003 17.3307Z"
-            fill="white"
-          />
-        </svg>
+        <Link to="/camera">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            fill="none"
+          >
+            <path
+              d="M24.0003 17.3307H17.3337V23.9974C17.3337 24.351 17.1932 24.6902 16.9431 24.9402C16.6931 25.1903 16.3539 25.3307 16.0003 25.3307C15.6467 25.3307 15.3076 25.1903 15.0575 24.9402C14.8075 24.6902 14.667 24.351 14.667 23.9974V17.3307H8.00033C7.6467 17.3307 7.30757 17.1903 7.05752 16.9402C6.80747 16.6902 6.66699 16.351 6.66699 15.9974C6.66699 15.6438 6.80747 15.3046 7.05752 15.0546C7.30757 14.8045 7.6467 14.6641 8.00033 14.6641H14.667V7.9974C14.667 7.64377 14.8075 7.30463 15.0575 7.05459C15.3076 6.80454 15.6467 6.66406 16.0003 6.66406C16.3539 6.66406 16.6931 6.80454 16.9431 7.05459C17.1932 7.30463 17.3337 7.64377 17.3337 7.9974V14.6641H24.0003C24.3539 14.6641 24.6931 14.8045 24.9431 15.0546C25.1932 15.3046 25.3337 15.6438 25.3337 15.9974C25.3337 16.351 25.1932 16.6902 24.9431 16.9402C24.6931 17.1903 24.3539 17.3307 24.0003 17.3307Z"
+              fill="white"
+            />
+          </svg>
+        </Link>
       </div>
       <svg
         className="absolute -top-[32px] left-1/2 -translate-x-1/2"

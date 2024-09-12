@@ -1,35 +1,41 @@
 import React, { useState } from "react";
 
-const TextInputField = ({ label, placeholder }) => {
+const TextInputField = ({ label, placeholder, required,value, labelClassName }) => {
   return (
     <div className="flex flex-col gap-2 mt-2">
-      <label className=" text-[16px] font-medium lead">
+      <label className={`text-4 font-medium lead ${labelClassName}`}>
         {label}
-        <span className="text-[#D83C53]">*</span>
+        {required && <span className="text-[#D83C53]">*</span>}{" "}
       </label>
       <input
         type="text"
         placeholder={placeholder}
-        className="border-[1px] border-[#D7D7D7] placeholder:text-[#D7D7D7] placeholder:text-[16px] rounded-full w-full h-[60px] px-6 focus-visible:outline-[#0073E7]"
-      />
+        className={`border-[1px] border-[#D7D7D7] placeholder:text-[#D7D7D7] placeholder:text-4 rounded-full w-full h-[60px] px-6 focus-visible:outline-[#0073E7] `}
+      value={value||""}
+/>
     </div>
   );
 };
 
 export default TextInputField;
 
-export const PasswordInputField = ({ label, placeholder, subtitle }) => {
+export const PasswordInputField = ({
+  label,
+  placeholder,
+  subtitle,
+  required,
+}) => {
   return (
     <div className="flex flex-col mt-2">
-      <label className=" text-[16px] font-medium lead">
+      <label className=" text-4 font-medium lead">
         {label}
-        <span className="text-[#D83C53]">*</span>
+        {required && <span className="text-[#D83C53]">*</span>}
       </label>
       <div className="relative mt-2">
         <input
           type="password"
           placeholder={placeholder}
-          className="border-[1px] border-[#D7D7D7] placeholder:text-[#D7D7D7] placeholder:text-[16px] rounded-full w-full h-[60px] px-6 focus-visible:outline-[#0073E7]"
+          className="border-[1px] border-[#D7D7D7] placeholder:text-[#D7D7D7] placeholder:text-4 rounded-full w-full h-[60px] px-6 focus-visible:outline-[#0073E7]"
         />
         <button>
           <svg
@@ -53,7 +59,7 @@ export const PasswordInputField = ({ label, placeholder, subtitle }) => {
           </svg>
         </button>
       </div>
-      {subtitle && <span className="text-[14px] mt-1">{subtitle}</span>}
+      {subtitle && <span className="text-3 mt-1">{subtitle}</span>}
     </div>
   );
 };

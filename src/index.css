@@ -8,31 +8,37 @@
     font-weight: normal;
     font-style: normal;
   }
+@font-face {
+    font-family: "Mona Sans";
+    src: url("./assets/fonts/mona-sans/Mona-Sans-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+  }
 
   @font-face {
     font-family: "Mona Sans";
     src: url("./assets/fonts/mona-sans/Mona-Sans-Light.ttf") format("truetype");
-    font-weight: normal;
+    font-weight: 300;
     font-style: normal;
   }
 
   @font-face {
     font-family: "Mona Sans";
     src: url("./assets/fonts/mona-sans/Mona-Sans-Medium.ttf") format("truetype");
-    font-weight: normal;
+    font-weight: 500;
     font-style: normal;
   }
 
   @font-face {
     font-family: "Mona Sans";
     src: url("./assets/fonts/mona-sans/Mona-Sans-Bold.ttf") format("truetype");
-    font-weight: normal;
+    font-weight: 700;
     font-style: normal;
   }
   
   @font-face {
     font-family: "Mona Sans";
     src: url("./assets/fonts/mona-sans/Mona-Sans-SemiBold.ttf") format("truetype");
-    font-weight: normal;
+    font-weight: 600;
     font-style: normal;
   }
