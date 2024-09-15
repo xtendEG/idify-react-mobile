@@ -1,14 +1,13 @@
 import React from "react";
-import Heading from "../../components/common/heading";
 import person from "../../assets/images/profile/history/person-2.png";
 import Dropdown from "../../components/common/dropdown";
 import { Button } from "../../components/common/button";
+import AppLayout from "../../components/common/app-layout";
 
 const CreateAlbum = () => {
   return (
-    <div className="relative font-mona py-10 px-4 ">
-      <Heading heading={"Generate Album"} />
-     <div className="mt-10">
+    <AppLayout headingTitle={"Create Album"} headingBg={"bg-white"}>
+      <div className="mt-10">
         <div className="flex gap-4">
           <div className="rounded-[10px] overflow-hidden border-[1px] border-[#D7D7D7] w-[78px] h-[78px] pt-2 px-1">
             <img
@@ -58,13 +57,12 @@ const CreateAlbum = () => {
             />{" "}
           </div>
           <Button
-          label={"Generate"}
-          attr={{ className: "text-white mt-10 mb-4" }}
-        />
+            label={"Generate"}
+            attr={{ className: "text-white mt-10 mb-4" }}
+          />
         </form>
-   
-      </div> 
-    </div>
+      </div>
+    </AppLayout>
   );
 };
 

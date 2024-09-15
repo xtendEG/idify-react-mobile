@@ -41,7 +41,7 @@ const Camera = () => {
   const [imageSize, setImageSize] = useState(imageSizes[0]);
   return (
     <div className=" bg-[#353535] h-screen flex flex-col justify-between">
-      <div className="px-2 pt-12 pb-4 flex items-center justify-between bg-[#151412]">
+      <div className="px-2 pt-12 pb-4 flex items-center justify-between bg-secondary">
         <div className="relative w-[56px] h-[56px] bg-primary rounded-[8px] flex items-center justify-center ">
           <img src={photo} alt="" />
           <input type="file" className="absolute inset-0 opacity-0" />
@@ -57,7 +57,7 @@ const Camera = () => {
         <Angle className="absolute bottom-0 left-0 rotate-[270deg] " />
         <Angle className="absolute top-0 right-0 rotate-[90deg]" />
       </div>
-      <div className="bg-[#151412] py-10 px-2">
+      <div className="bg-secondary py-10 px-2">
         <div className="flex items-center gap-[28px] overflow-auto">
           {imageSizes.map((size) => (
             <ActionBox

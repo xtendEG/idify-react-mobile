@@ -1,5 +1,5 @@
 import React from "react";
-import Heading from "../../../components/common/heading";
+import AppLayout from "../../../components/common/app-layout";
 const Terms = () => {
   const terms = [
     {
@@ -50,11 +50,13 @@ const Terms = () => {
   ];
 
   return (
-    <div className="flex flex-col min-h-screen font-mona">
-      <div className="flex-grow overflow-auto pb-[100px]">
-        <div className="py-10 px-4">
-          <Heading heading="Terms and Conditions" />
-          <div className="mt-5 font-light text-3 leading-[30px]">
+    <div>
+      <AppLayout
+        headingTitle={"Terms and Conditions"}
+        headingBg={"bg-white"}
+        childrenClassName={"pb-[120px]"}
+      >
+         <div className="mt-5 font-light text-3 leading-[30px]">
             {terms.map((term, index) => (
               <div key={term.title} className="mb-4">
                 <h3 className="font-medium">
@@ -64,8 +66,7 @@ const Terms = () => {
               </div>
             ))}
           </div>
-        </div>
-      </div>
+      </AppLayout>
       <Actions />
     </div>
   );
@@ -80,7 +81,7 @@ export const Actions = () => {
       <button className={`${classes} text-primary border-[1px] border-primary`}>
         Decline
       </button>
-      <button className={`${classes} bg-primary text-white`}>Accept</button>
+      <button className={`${classes} bg-primary active:bg-secondary transition-all duration-150 text-white active:bg-secondary transition-all duration-150`}>Accept</button>
     </div>
   );
 };

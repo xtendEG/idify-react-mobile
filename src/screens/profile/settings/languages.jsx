@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import Heading from "../../../components/common/heading";
 import pk from "../../../assets/images/settings/languages/pakistan.svg";
 import us from "../../../assets/images/settings/languages/america.svg";
 import ksa from "../../../assets/images/settings/languages/saudi-arabia.svg";
+import AppLayout from "../../../components/common/app-layout";
+import Radio from "../../../components/common/radio";
 const Languages = () => {
-  const languages = [
+   const languages = [
     {
       name: "English",
       flag: us,
@@ -20,9 +21,8 @@ const Languages = () => {
   ];
   const [selectedLanguage, setSelectedLanguage] = useState("English");
   return (
-    <div className="relative font-mona py-10 px-4 ">
-      <Heading heading={"Languages"}  />
-      <div className="flex flex-col justify-center items-center h-screen">
+    <AppLayout headingTitle={"Languages"} headingBg={"bg-white"}>
+      <div className="flex flex-col justify-center items-center h-[calc(100vh-150px)]">
         {languages.map((language) => (
           <div
             onClick={() => setSelectedLanguage(language.name)}
@@ -41,23 +41,9 @@ const Languages = () => {
           </div>
         ))}
       </div>
-    </div>
+    </AppLayout>
   );
 };
 
 export default Languages;
 
-const Radio = ({ isSelected }) => {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="20"
-      height="20"
-      viewBox="0 0 20 20"
-      fill="none"
-    >
-      <circle cx="10" cy="10" r="9.25" stroke="#D7D7D7" strokeWidth="1.5" />
-      {isSelected && <circle cx="10" cy="10" r="7" fill="#1CD29B" />}
-    </svg>
-  );
-};

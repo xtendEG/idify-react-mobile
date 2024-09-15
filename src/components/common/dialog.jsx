@@ -21,7 +21,7 @@ const Dialog = ({ isOpen, setIsOpen, header, content, footer }) => {
 
   if (!isOpen) return null;
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center p-4 font-mona">
+    <div className="fixed z-50 inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center p-4 font-mona">
       <div
         ref={dialogRef}
         className="bg-white rounded-lg shadow-xl max-w-sm w-full"

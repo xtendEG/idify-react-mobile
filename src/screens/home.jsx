@@ -1,5 +1,4 @@
 import React from "react";
-import Heading from "../components/common/heading";
 import Subheading from "../components/common/subheading";
 import id from "../assets/images/home/id.svg";
 import primit from "../assets/images/home/primit.svg";
@@ -10,7 +9,11 @@ import health from "../assets/images/home/health.svg";
 import license from "../assets/images/home/license.svg";
 import AccordionItem, { Accordion } from "../components/common/accordion";
 import SearchInput from "../components/common/search-input";
- const Home = () => {
+import AppLayout from "../components/common/app-layout";
+import { Link } from "react-router-dom";
+import linkArrow from "../assets/images/common/link-arrow.svg";
+
+const Home = () => {
   const desc = `Size: The photo should be 4 cm x 6 cm
 Color and Background: The photo should be in color, with a white or off-white background. The background should be plain and without any patterns or shadows.
 Head Position: The head should be directly facing the camera, with the face fully visible. The head should not be tilted or turned in any direction. Both ears should be visible.
@@ -57,8 +60,11 @@ Photo Quality: The photo should be of high quality, with good resolution and sha
   ];
 
   return (
-    <div className="font-mona py-10 px-4 pb-[120px]">
-      <Heading heading="Home"  />
+    <AppLayout
+      headingTitle={"Home"}
+      headingBg={"bg-white"}
+      childrenClassName="pb-[120px]"
+    >
       <Subheading
         heading="Welcome To Idify!"
         subHeading="Discover your needed template requirements and get started!"
@@ -78,11 +84,20 @@ Photo Quality: The photo should be of high quality, with good resolution and sha
                   <h2 className="text-3 font-medium">{service.title}</h2>
                 </div>
               }
+              contentLink={
+                <Link to="/" className="flex items-center gap-2 mt-2">
+                  <img src={linkArrow} alt="" />
+
+                  <span className="text-3 leading-[16.8px] tracking-[-0.02em] font-medium underline">
+                    Try Now
+                  </span>
+                </Link>
+              }
             />
           ))}
         </Accordion>
       </div>
-    </div>
+    </AppLayout>
   );
 };
 

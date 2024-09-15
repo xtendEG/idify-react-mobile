@@ -4,7 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 const Navbar = () => {
   const pathname = useLocation().pathname;
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 h-[86px] flex items-end justify-between font-mona py-5 px-12 shadow-custom  bg-white">
+    <div className="fixed bottom-0 left-0 right-0 z-50 flex items-end justify-between font-mona pt-5 pb-8 px-12 shadow-custom  bg-white">
       <Link
         to={"/"}
         className={`flex flex-col items-center ${
@@ -94,7 +94,7 @@ const Plus = () => {
   return (
     <>
       {" "}
-      <div className="absolute -top-6 left-1/2  -translate-x-1/2 z-10 flex items-center justify-center w-[58px] h-[58px] rounded-full bg-primary">
+      <div className="absolute -top-6 left-1/2  -translate-x-1/2 z-10 flex items-center justify-center w-[58px] h-[58px] rounded-full bg-custom-gradient-2">
         <Link to="/camera">
           <svg
             xmlns="http://www.w3.org/2000/svg"

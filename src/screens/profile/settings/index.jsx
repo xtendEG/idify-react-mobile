@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Heading from "../../../components/common/heading";
 import { Link } from "react-router-dom";
 import book from "../../../assets/images/settings/book.svg";
 import about from "../../../assets/images/settings/about.svg";
@@ -15,6 +14,7 @@ import SmallArrow from "../../../components/common/small-arrow";
 import Dialog from "../../../components/common/dialog";
 import trash from "../../../assets/images/settings/trash.png";
 import CloseIcon from "../../../components/common/close-icon";
+import AppLayout from "../../../components/common/app-layout";
 const Settings = () => {
   const settingLinks = {
     general: {
@@ -76,55 +76,52 @@ const Settings = () => {
   };
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   return (
-    <>
-      <div className="relative font-mona py-10 px-4 ">
-        <Heading heading={"Settings"} />
-        <div className="mt-7">
-          {Object.keys(settingLinks).map((key) => (
-            <div key={key} className={settingLinks[key].space && "mt-14"}>
-              <h2 className="text-3 font-medium mb-4 mt-5">
-                {settingLinks[key].title}
-              </h2>
-              <div className="">
-                {settingLinks[key].links.map((link) =>
-                  link.to ? (
-                    <Link
-                      className="flex items-center justify-between px-5 py-4 rounded-[10px] bg-[#F6F7F8] mb-3"
-                      key={link.title}
-                      to={link.to}
-                    >
-                      <div className="flex items-center gap-2">
-                        <img src={link.icon} alt="" />
-                        <h3 className="text-3">{link.title}</h3>
-                      </div>
-                      <SmallArrow className={"rotate-[270deg]"} />
-                    </Link>
-                  ) : (
-                    <div
-                      className="flex items-center justify-between rounded-[10px] px-5 py-2 bg-[#F6F7F8] mb-3"
-                      key={link.title}
-                    >
-                      <div className="flex items-center gap-2">
-                        <img src={link.icon} alt="" />
-                        <h3 className="text-3">{link.title}</h3>
-                      </div>
-                      <Switching />
+    <AppLayout headingTitle={"Settings"} headingBg={"bg-white"}>
+      <div className="mt-7">
+        {Object.keys(settingLinks).map((key, index) => (
+          <div key={index} className={settingLinks[key].space && "mt-14"}>
+            <h2 className="text-3 font-medium mb-4 mt-5">
+              {settingLinks[key].title}
+            </h2>
+            <div className="">
+              {settingLinks[key].links.map((link, index) =>
+                link.to ? (
+                  <Link
+                    className="flex items-center justify-between px-5 py-4 rounded-[10px] bg-[#F6F7F8] mb-3"
+                    key={index}
+                    to={link.to}
+                  >
+                    <div className="flex items-center gap-2">
+                      <img src={link.icon} alt="" />
+                      <h3 className="text-3">{link.title}</h3>
                     </div>
-                  )
-                )}
-              </div>
+                    <SmallArrow className={"rotate-[270deg]"} />
+                  </Link>
+                ) : (
+                  <div
+                    className="flex items-center justify-between rounded-[10px] px-5 py-2 bg-[#F6F7F8] mb-3"
+                    key={index}
+                  >
+                    <div className="flex items-center gap-2">
+                      <img src={link.icon} alt="" />
+                      <h3 className="text-3">{link.title}</h3>
+                    </div>
+                    <Switching />
+                  </div>
+                )
+              )}
             </div>
-          ))}
-          <div
-            onClick={() => setIsDialogOpen(true)}
-            className="flex items-center justify-between px-5 py-4 rounded-[10px] bg-[#F6F7F8] mb-3"
-          >
-            <div className="flex items-center gap-2">
-              <img src={deleteIcon} alt="" />
-              <h3 className="text-3">Delete Account</h3>
-            </div>
-            <SmallArrow className={"rotate-[270deg]"} />
           </div>
+        ))}
+        <div
+          onClick={() => setIsDialogOpen(true)}
+          className="flex items-center justify-between px-5 py-4 rounded-[10px] bg-[#F6F7F8] mb-3"
+        >
+          <div className="flex items-center gap-2">
+            <img src={deleteIcon} alt="" />
+            <h3 className="text-3">Delete Account</h3>
+          </div>
+          <SmallArrow className={"rotate-[270deg]"} />
         </div>
       </div>
       <Dialog
@@ -152,16 +149,15 @@ const Settings = () => {
           <>
             <button
               onClick={() => setIsDialogOpen(false)}
-              className="bg-[#151412] text-3 font-medium leading-[16.8px] tracking-[-0.28px] px-7 py-2 rounded-full text-white mx-auto mt-4"
+              className="bg-secondary text-3 font-medium leading-[16.8px] tracking-[-0.28px] px-7 py-2 rounded-full text-white mx-auto mt-4"
             >
               Delete
             </button>
           </>
         }
       />
-    </>
+    </AppLayout>
   );
 };
 
 export default Settings;
-

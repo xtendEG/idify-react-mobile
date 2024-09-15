@@ -1,6 +1,6 @@
 import React from "react";
-import Heading from "../../../components/common/heading";
 import AccordionItem, { Accordion } from "../../../components/common/accordion";
+import AppLayout from "../../../components/common/app-layout";
 
 const Help = () => {
   const accordion = [
@@ -26,8 +26,11 @@ const Help = () => {
     },
   ];
   return (
-    <div className="font-mona py-10 px-4 pb-20">
-      <Heading heading="Privacy Policy" />{" "}
+    <AppLayout
+      headingTitle={"Help"}
+      headingBg={"bg-white"}
+      childrenClassName={"pb-20"}
+    >
       <div className="mt-5 font-light text-3 leading-[30px] ">
         <p>
           Welcome to the Help & Support section. We're here to assist you and
@@ -50,7 +53,7 @@ const Help = () => {
           ))}
         </Accordion>
         <div className="text-3 leading-[20px] font-light max-w-[320px]">
-          <h3 className="my-4 font-medium">Contacting Support</h3>
+          <h3 className="my-4 font-medium text-base">Contacting Support</h3>
           <p>
             If you have any further questions or require assistance, our support
             team is here to help. Please reach out to us using
@@ -62,7 +65,7 @@ const Help = () => {
             support team will strive to respond to your inquiries in a timely
             manner.
           </p>
-          <h3 className="my-4 font-medium">User Feedback</h3>
+          <h3 className="my-4 font-medium text-base">User Feedback</h3>
           <p>
             We value your feedback and suggestions to improve our app and
             services. If you have any ideas, feature requests, or general
@@ -71,7 +74,7 @@ const Help = () => {
           </p>
         </div>
       </div>
-    </div>
+    </AppLayout>
   );
 };
 

@@ -42,3 +42,9 @@
     font-weight: 600;
     font-style: normal;
   }
+  @font-face {
+    font-family: "Monomaniac One";
+    src: url("./assets/fonts/MonomaniacOne/MonomaniacOne-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+  }

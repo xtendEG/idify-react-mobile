@@ -1,7 +1,7 @@
 import React from "react";
-import Heading from "../../../components/common/heading";
 import StructuredTextDisplay from "../../../components/common/formmat-text";
 import { Actions } from "./terms";
+import AppLayout from "../../../components/common/app-layout";
 
 const Privacy = () => {
   const policy = [
@@ -50,24 +50,32 @@ const Privacy = () => {
     },
   ];
   return (
-    <div className="font-mona py-10 px-4 min-h-custom-screen pb-32">
-      <Heading heading="Privacy Policy" />{" "}
-      <div className="mt-5 font-light text-3 leading-[30px] ">
-        <p>
-          Idify is a secure mobile application designed to assist you in editing
-          and enhancing images of government documents. Our app provides a
-          convenient and efficient way to make visual adjustments to documents
-          such as passports, driver's licenses, and identification cards.
-        </p>
-        {policy.map((term, index) => (
-          <div key={term.title} className="mb-4 max-w-[357px]">
-            <h3 className="font-medium">
-              {index + 1}. {term.title}
-            </h3>
-            <StructuredTextDisplay className="text-3 ps-2" text={term.subtitle} />
+    <div className="font-mona  px-4 min-h-custom-screen pb-32">
+      <AppLayout
+        headingTitle={"Privacy Policy"}
+        headingBg={"bg-white"}
+       >
+           <div className="mt-5 font-light text-3 leading-[30px] ">
+            <p>
+              Idify is a secure mobile application designed to assist you in
+              editing and enhancing images of government documents. Our app
+              provides a convenient and efficient way to make visual adjustments
+              to documents such as passports, driver's licenses, and
+              identification cards.
+            </p>
+            {policy.map((term, index) => (
+              <div key={term.title} className="mb-4 max-w-[357px]">
+                <h3 className="font-medium">
+                  {index + 1}. {term.title}
+                </h3>
+                <StructuredTextDisplay
+                  className="text-3 ps-2"
+                  text={term.subtitle}
+                />
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
+       </AppLayout>
       <Actions />
     </div>
   );

@@ -1,5 +1,4 @@
 import React from "react";
-import Heading from "../../components/common/heading";
 import SearchInput from "../../components/common/search-input";
 import Dropdown from "../../components/common/dropdown";
 import filter from "../../assets/images/profile/history/filter.svg";
@@ -8,6 +7,7 @@ import dots from "../../assets/images/profile/dots.svg";
 import { Link } from "react-router-dom";
 import search from "../../assets/images/profile/history/search.png";
 import empty from "../../assets/images/profile/history/empty.png";
+import AppLayout from "../../components/common/app-layout";
 
 const History = () => {
   const filters = [
@@ -50,37 +50,39 @@ const History = () => {
     },
   ];
   return (
-    <div className="relative font-mona py-10 px-4 ">
-      <Heading heading={"History"} />
-
-      <div className="mt-5">
-        <div className="flex items-center gap-4">
-          <div className="grow">
-            <SearchInput />
+    <AppLayout
+      headingTitle={"History"}
+      headingBg={"bg-white"}
+  
+    >
+       <div className="mt-5">
+          <div className="flex items-center gap-4">
+            <div className="grow">
+              <SearchInput />
+            </div>
+            <Dropdown
+              btnClassName={
+                "w-[32px] h-[32px] rounded-full  shadow-custom flex items-center justify-center"
+              }
+              options={filters}
+              icon={<img src={filter} alt="" />}
+              menuClassName={"top-[calc(100%+6px)]"}
+              arrowFill={"#000"}
+            />
           </div>
-          <Dropdown
-            btnClassName={
-              "w-[32px] h-[32px] rounded-full  shadow-custom flex items-center justify-center"
-            }
-            options={filters}
-            btnContent={<img src={filter} alt="" />}
-            menuClassName={"top-[calc(100%+6px)]"}
-            arrowFill={"#000"}
-          />
-        </div>
-        <div className="mt-8 flex flex-col gap-4">
-          {serviceHistory.map((service) => (
-            <ServiceRow key={service.service} service={service} />
-          ))}
-        </div>
-        {/* should be shown when there are no services after search  */}
-        
-        {/* <NoResults height={"h-[calc(100vh-200px)]"} image={search} title={"No Results found"} description={" We can’t find any item matching your search, try another way"} /> */}
-      </div>
-        {/* should be shown when there are no services yet  */}
+          <div className="mt-8 flex flex-col gap-4">
+            {serviceHistory.map((service) => (
+              <ServiceRow key={service.service} service={service} />
+            ))}
+          </div>
+          {/* should be shown when there are no services after search  */}
 
-        {/* <NoResults height={"h-[calc(100vh-100px)]"} image={empty} title={"No History yet"} description={" Looks like you haven’t added any orders yet. "} /> */}
-    </div>
+          {/* <NoResults height={"h-[calc(100vh-200px)]"} image={search} title={"No Results found"} description={" We can’t find any item matching your search, try another way"} /> */}
+        </div>
+    </AppLayout>
+    // should be shown when there are no services yet
+
+    // <NoResults height={"h-[calc(100vh-100px)]"} image={empty} title={"No History yet"} description={" Looks like you haven’t added any orders yet. "} />
   );
 };
 
@@ -112,7 +114,7 @@ const ServiceRow = ({ service: { service, date, price, status, image } }) => {
       <div className="flex flex-col justify-between">
         <div className="relative">
           <Dropdown
-            btnContent={<img src={dots} alt="" />}
+            icon={<img src={dots} alt="" />}
             options={serviceOptions}
             menuClassName={"top-[calc(100%-10px)]"}
           />
@@ -123,13 +125,15 @@ const ServiceRow = ({ service: { service, date, price, status, image } }) => {
   );
 };
 
-const NoResults = ({height, image,title,description}) => {
+const NoResults = ({ height, image, title, description }) => {
   return (
-    <div className={`${height} flex flex-col items-center justify-center  w-full` }>
+    <div
+      className={`${height} flex flex-col items-center justify-center  w-full`}
+    >
       <img src={image} alt="" />
       <h2 className="text-5 font-medium mt-12">{title}</h2>
       <p className="text-4 font-light leading-[20px] text-center mt-2 max-w-[250px]">
-       {description}
+        {description}
       </p>
     </div>
   );

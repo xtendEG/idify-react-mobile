@@ -28,10 +28,15 @@ import {
   Rotate,
   Crop,
   Adjust,
-  Enhance
+  Enhance,
+  Checkout,
+  Payment,
+  Invoice,
+  ViewPhoto,
+  Welcome,
+  Steps,
 } from "./screens";
 import Navbar from "./components/common/navbar";
-import Welcome from "./components/start/Welcome";
 
 function App() {
   const location = useLocation();
@@ -65,16 +70,22 @@ function App() {
           element={<ChangePassword />}
         />
 
-        <Route path="/camera" element={<Camera />} /> 
-        <Route path="/camera/preview" element={<Preview />} /> 
-        <Route path="/camera/edit" element={<EditImage />} /> 
-        <Route path="/camera/edit/rotate" element={<Rotate />} /> 
-        <Route path="/camera/edit/crop" element={<Crop />} /> 
-        <Route path="/camera/edit/adjust" element={<Adjust />} /> 
-        <Route path="/camera/edit/enhance" element={<Enhance />} /> 
+        <Route path="/camera" element={<Camera />} />
+        <Route path="/camera/preview" element={<Preview />} />
+        <Route path="/camera/edit" element={<EditImage />} />
+        <Route path="/camera/edit/rotate" element={<Rotate />} />
+        <Route path="/camera/edit/crop" element={<Crop />} />
+        <Route path="/camera/edit/adjust" element={<Adjust />} />
+        <Route path="/camera/edit/enhance" element={<Enhance />} />
+
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/checkout/payment" element={<Payment />} />
+        <Route path="/checkout/invoice" element={<Invoice />} />
+        <Route path="/checkout/view" element={<ViewPhoto />} />
 
         <Route path="/start" element={<Start />} />
         <Route path="/start/welcome" element={<Welcome />} />
+        <Route path="/start/steps" element={<Steps />} />
 
         <Route path="/auth/signup" element={<Signup />} />
         <Route path="/auth/login" element={<Login />} />

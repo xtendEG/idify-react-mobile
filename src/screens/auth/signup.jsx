@@ -7,19 +7,20 @@ import { Link } from "react-router-dom";
 import { Button } from "../../components/common/button";
 import Divider from "../../components/auth/divider";
 import { SocialIcons } from "../../components/auth/providers";
-import Heading from "../../components/common/heading";
+import AppLayout from "../../components/common/app-layout";
 const Signup = () => {
   return (
-    <div className="font-mona py-10 px-4">
-      <Heading heading="Sign Up"  />
+    <AppLayout headingTitle={"Sign Up"} headingBg={"bg-white"}>
       <form className="mt-5">
-        <InputField label="Full Name" placeholder="Enter Your Full Name" />
-        <InputField label="Email" placeholder="Enter Your Email Address" />
+        <InputField required={true} label="Full Name" placeholder="Enter Your Full Name" />
+        <InputField required={true} label="Email" placeholder="Enter Your Email Address" />
         <InputField
+          required={true}
           label="Phone Number"
           placeholder="Enter Your Phone Number"
         />
         <PasswordInputField
+        required={true}
           label="Password"
           placeholder="Enter Your Password"
           subtitle="At least 8 characters"
@@ -50,7 +51,7 @@ const Signup = () => {
           </Link>
         </p>
       </form>
-    </div>
+    </AppLayout>
   );
 };
 

@@ -1,14 +1,14 @@
 import React from "react";
 import logo from "../../assets/images/logo.png";
-import { Button } from "../common/button";
+import { Button } from "../../components/common/button";
 import { Link, useNavigate } from "react-router-dom";
 const Welcome = () => {
   const navigate = useNavigate();
   return (
-    <div className="font-mona px-4 flex flex-col items-center justify-between gap-5 bg-[#151412] text-white min-h-screen py-10">
-      <div className="flex flex-col items-center mt-10">
+    <div className="font-mona px-4 grid place-items-center max-h-screen bg-secondary text-white min-h-screen py-10">
+      <div className="flex flex-col items-center ">
         <img src={logo} alt="" className="mt-24" />
-        <h2 className="text-[24px] leading-[28.8px] tracking-[-0.48px] font-medium mt-16 mb-8">
+        <h2 className="text-[24px] leading-[28.8px] tracking-[-0.48px] font-medium mt-12 mb-8">
           Welcome to Idify
         </h2>
         <p className="text-3 leading-[16.8px] tracking-[-0.28px] font-light max-w-[265px] mx-auto text-center">

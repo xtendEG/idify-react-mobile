@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import adjust from "../../../assets/images/camera/adjust.svg";
 import cropRotate from "../../../assets/images/camera/crop-rotate.svg";
 import resize from "../../../assets/images/camera/resize.svg";
@@ -16,34 +15,12 @@ import StructuredTextDisplay from "../../../components/common/formmat-text";
 
 const Edit = () => {
   const editOptions = [
-    {
-      image: stick,
-      actionName: "Enhance",
-      to: "/camera/edit/enhance",
-    },
-    {
-      image: cropRotate,
-      actionName: "Rotate",
-      to: "/camera/edit/rotate",
-    },
-    {
-      image: crop,
-      actionName: "Crop",
-      to: "/camera/edit/crop",
-    },
-    {
-      image: adjust,
-      actionName: "Adjust",
-      to: "/camera/edit/adjust",
-    },
-    {
-      image: resize,
-      actionName: "Resize",
-    },
-    {
-      image: remove,
-      actionName: "Remove Background",
-    },
+    { image: stick, actionName: "Enhance", to: "/camera/edit/enhance" },
+    { image: cropRotate, actionName: "Rotate", to: "/camera/edit/rotate" },
+    { image: crop, actionName: "Crop", to: "/camera/edit/crop" },
+    { image: adjust, actionName: "Adjust", to: "/camera/edit/adjust" },
+    { image: resize, actionName: "Resize" },
+    { image: remove, actionName: "Remove Background" },
   ];
   const navigate = useNavigate();
   const [samePageEdit, setSamePageEdit] = useState({
@@ -51,7 +28,7 @@ const Edit = () => {
     actionName: "",
   });
   const content = {
-    title: " National ID Service",
+    title: "National ID Service",
     subtitle:
       "Before continuing your process, you may need to be aware of some requirements.",
     desc: `•Size: The photo should be 4 cm x 6 cm
@@ -64,28 +41,37 @@ const Edit = () => {
 •Glasses: If the person wears glasses, the eyes should be clearly visible without any reflections. Sunglasses or tinted glasses are not allowed.
 •Photo Quality: The photo should be of high quality, with good resolution and sharpness. It should not be blurry, grainy, or pixelated.`,
   };
-  // const [confirmDialog, setConfirmDialog] = useState(true);
+
   return (
-    <div className="font-mona flex flex-col justify-between h-screen pb-10 bg-[#151412]">
-      {/* <ConfirmDialog
-        isDialogOpen={confirmDialog}
-        setIsDialogOpen={setConfirmDialog}
-        content={content}
-      /> */}
-      <Heading pb={samePageEdit.open ? "pb-5" : "pb-20"} />
-      <div className="grow flex justify-center bg-white items-end">
-        <img src={person} alt="" className="h-[485px]" />
+    <div className="font-mona flex flex-col h-screen bg-secondary">
+      <Heading height={"h-[14vh]"} pb={samePageEdit.open ? "pb-5" : "pb-16"} />
+      <div
+        className={`flex-grow flex ${
+          samePageEdit.open && samePageEdit.actionName === "Resize"
+            ? "h-[45vh]"
+            : samePageEdit.open &&
+              samePageEdit.actionName === "Remove Background"
+            ? "h-[58vh]"
+            : "h-[60vh]"
+        } justify-center items-end bg-white `}
+      >
+        <img src={person} alt="" className=" w-[90%] max-h-full" />
       </div>
 
       <div
-        className={`bg-[#151412]  px-4 ${
-          samePageEdit.open ? " pt-7 pb-7" : " pt-12 pb-10"
+        className={`grid bg-secondary pb-4 px-2 grow ${
+          samePageEdit.open && samePageEdit.actionName === "Resize"
+            ? "h-[34vh] pt-2"
+            : samePageEdit.open &&
+              samePageEdit.actionName === "Remove Background"
+            ? "h-[26vh] pt-2 "
+            : "h-[24vh] pt-10"
         } `}
       >
         {samePageEdit.open && samePageEdit.actionName === "Resize" && (
           <Resize />
         )}
-        <div className="flex items-start gap-[24px] overflow-auto ">
+        <div className="flex items-start gap-6 overflow-x-auto py-1 h-fit">
           {editOptions.map((option) => (
             <ActionBox
               key={option.actionName}
@@ -114,21 +100,23 @@ export default Edit;
 
 const Resize = () => {
   return (
-    <div className="flex mb-5 justify-between px-8 gap-4">
-      <div className="flex gap-3 items-center ">
-        <h6 className="text-white text-3">Width</h6>
+    <div className="flex mb-5 justify-between px-4 gap-4">
+      <div className="flex gap-3 items-center">
+        <h6 className="text-white text-sm">Width</h6>
         <input
           type="text"
-          className={`border-[1px] bg-transparent text-white border-[#D7D7D7] rounded-full max-w-[70px] py-2 w text-center focus-visible:outline-none  `}
-          value={"4 cm"}
+          className="border border-[#D7D7D7] bg-transparent text-white rounded-full w-20 py-2 text-center focus:outline-none"
+          value="4 cm"
+          readOnly
         />
       </div>
-      <div className="flex gap-3 items-center ">
-        <h6 className="text-white text-3">Height</h6>
+      <div className="flex gap-3 items-center">
+        <h6 className="text-white text-sm">Height</h6>
         <input
           type="text"
-          className={`border-[1px] bg-transparent text-white border-[#D7D7D7] rounded-full py-2 w max-w-[70px] text-center focus-visible:outline-none  `}
-          value={"10 cm"}
+          className="border border-[#D7D7D7] bg-transparent text-white rounded-full w-20 py-2 text-center focus:outline-none"
+          value="10 cm"
+          readOnly
         />
       </div>
     </div>
@@ -145,28 +133,21 @@ const ConfirmDialog = ({
       isOpen={isDialogOpen}
       setIsOpen={setIsDialogOpen}
       content={
-        <div className="">
-          <h3 className="text-4 leading-[15.47px] font-semibold ">
-            {title}
-          </h3>
-
+        <div className="p-4">
+          <h3 className="text-lg font-semibold mb-2">{title}</h3>
           {subtitle && (
-            <h5 className="text-3  leading-[13.54px] max-w-[298px] my-4">
-              {subtitle}{" "}
-            </h5>
+            <h5 className="text-sm mb-4 max-w-[298px]">{subtitle}</h5>
           )}
-          <StructuredTextDisplay className="leading-[22px] text-2 font-light" text={desc} />
+          <StructuredTextDisplay className="text-sm leading-6" text={desc} />
         </div>
       }
       footer={
-        <>
-          <button
-            onClick={() => setIsDialogOpen(false)}
-            className="bg-primary text-3 font-medium leading-[16.8px] tracking-[-0.28px] px-7 py-2 rounded-full text-white mx-auto mt-3"
-          >
-           Continue
-          </button>
-        </>
+        <button
+          onClick={() => setIsDialogOpen(false)}
+          className="bg-primary active:bg-secondary transition-all duration-150 text-white text-sm font-medium px-7 py-2 rounded-full mx-auto mt-3"
+        >
+          Continue
+        </button>
       }
     />
   );

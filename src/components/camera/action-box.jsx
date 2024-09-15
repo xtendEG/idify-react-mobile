@@ -10,7 +10,7 @@ const ActionBox = ({action:{
     <div className="flex flex-col items-center  gap-2">
     <button
       onClick={fn}
-      className={`w-[50px] h-[50px] rounded-full ${active ? "bg-primary" : "bg-[#2D2D2D]"} flex items-center justify-center`}
+      className={`w-[50px] h-[50px] rounded-full ${active ? "bg-primary active:bg-secondary transition-all duration-150" : "bg-[#2D2D2D]"} flex items-center justify-center`}
     >
       <img src={icon} alt="" />
     </button>

@@ -1,9 +1,9 @@
 import React from "react";
-import Heading from "../../../../components/common/heading";
 import { Link, useNavigate } from "react-router-dom";
 import SearchInput from "../../../../components/common/search-input";
 import { Button } from "../../../../components/common/button";
 import Status from "../../../../components/common/status";
+import AppLayout from "../../../../components/common/app-layout";
 
 const Support = () => {
   const navigate = useNavigate();
@@ -73,8 +73,7 @@ const Support = () => {
     },
   ];
   return (
-    <div className="font-mona py-10 px-4">
-      <Heading heading="Support Tickets" />
+    <AppLayout headingTitle="Support Tickets" headingBg="bg-white">
       <div className="mt-10 mb-16">
         <SearchInput />
         {tickets.map((ticket) => (
@@ -88,19 +87,18 @@ const Support = () => {
           />
         ))}
       </div>
-
       <div className="bg-white fixed bottom-0 left-0 right-0 px-2 py-2 z-10">
         <Button
           label={"Create New Ticket"}
           attr={{
             onClick: () => navigate("/profile/settings/support/create"),
-            className: "text-white mt-8 mb-5"
+            className: "text-white mt-8 mb-5",
           }}
         />
       </div>
-    </div>
+    </AppLayout>
 
-    // :     <EmptyTickets/> when no tickets yet.
+    //  :     <EmptyTickets/> when no tickets yet.
   );
 };
 
@@ -118,11 +116,14 @@ const Ticket = ({ title, date, description, status, id }) => {
         </h2>
         <h6 className="text-2 font-light  ">{date}</h6>
       </div>
-      {/* <div className="fldex dadfd-between"> */}
-    
+      <div className="flex justify-between items-center">
+        <p className="text-3 font-light">
+          {description.length > 50
+            ? description.slice(0, 50) + "..."
+            : description}
+        </p>
         <Status status={status} />
-      {/* </div> */}
+      </div>
     </Link>
   );
 };
-

@@ -32,7 +32,7 @@ const FirstEmail = () => {
         </div>
         <div className="mt-5 flex items-center gap-4">
           {attatchments.map(({ name, size }) => (
-            <Attachment name={name} size={size} />
+            <Attachment key={name} name={name} size={size} />
           ))}
         </div>
       </div>

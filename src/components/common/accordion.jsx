@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import SmallArrow from "./small-arrow";
-
-const AccordionItem = ({ titleSection, content, isOpen, onToggle }) => {
+const AccordionItem = ({ titleSection, content, isOpen, onToggle,contentLink }) => {
   const contentRef = useRef(null);
   const [contentHeight, setContentHeight] = useState(0);
 
@@ -36,6 +35,8 @@ const AccordionItem = ({ titleSection, content, isOpen, onToggle }) => {
         aria-hidden={!isOpen}
       >
         {content}
+
+        {contentLink}
       </div>
     </div>
   );
@@ -55,6 +56,7 @@ export const Accordion = ({ children }) => {
           return React.cloneElement(child, {
             isOpen: openAccordionIndex === index,
             onToggle: () => handleAccordionToggle(index),
+            key: index,
           });
         }
         return child;

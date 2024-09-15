@@ -28,7 +28,7 @@ const ErrorDialog = ({isDialogOpen, setIsDialogOpen}) => {
       <>
         <button
           onClick={() => setIsDialogOpen(false)}
-          className="bg-[#151412] text-3 font-medium leading-[16.8px] tracking-[-0.28px] px-7 py-2 rounded-full text-white mx-auto mt-4"
+          className="bg-secondary text-3 font-medium leading-[16.8px] tracking-[-0.28px] px-7 py-2 rounded-full text-white mx-auto mt-4"
         >
           Try Again
         </button>

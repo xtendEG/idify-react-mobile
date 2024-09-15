@@ -4,9 +4,14 @@ import step2 from "../../assets/images/home/step-2.png";
 import step3 from "../../assets/images/home/step-3.png";
 import { Button } from "../common/button";
 import { useNavigate } from "react-router-dom";
-import arrow from "../../assets/images/arrow.svg";
+import arrow from "../../assets/images/common/arrow.svg";
 const Stpes = () => {
   const StepArr = [
+    {
+      title: "Step One",
+      subtitle: "Take a new photo of yourself or import from the gallery",
+      img: step1,
+    },
     {
       title: "Step One",
       subtitle: "Take a new photo of yourself or import from the gallery",
@@ -39,7 +44,7 @@ const Stpes = () => {
     setStep(step - 1);
   };
   return (
-    <div className="font-mona px-4 flex flex-col items-center justify-between gap-5 min-h-screen py-10">
+    <div className="font-mona px-4 grid place-items-center h-screen pt-10 pb-5">
       <div>
         <img src={StepArr[step].img} alt="" className="mt-24" />
         <div className="text-center">
@@ -58,10 +63,10 @@ const Stpes = () => {
       </div>
       <Button
         label="Next"
-        bg="bg-[#151412]"
+        bg="bg-secondary"
         attr={{
           onClick: handleNext,
-          className: "mt-8 mb-5 text-white",
+          className: " text-white",
         }}
       />
       {step > 0 && (

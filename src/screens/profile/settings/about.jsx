@@ -1,5 +1,5 @@
 import React from "react";
-import Heading from "../../../components/common/heading";
+import AppLayout from "../../../components/common/app-layout";
 
 const About = () => {
   const about = [
@@ -10,9 +10,12 @@ const About = () => {
     "Legal Compliance: It's important to note that Idify is intended for personal use only and must be used in accordance with applicable laws and regulations. Using edited documents for fraudulent purposes or any illegal activities is strictly prohibited. We encourage users to familiarize themselves with the guidelines provided by relevant authorities regarding the use and acceptability of edited documents.",
   ];
   return (
-    <div className="relative font-mona py-10 px-4 font-mona">
-      <Heading heading={"About"}  />
-      <div className="mt-5 font-light text-3 leading-[30px]">
+    <AppLayout
+      headingTitle={"About"}
+      headingBg={"bg-white"}
+ 
+    >
+       <div className="mt-5 font-light text-3 leading-[30px]">
         <p>
           Idify is a secure mobile application designed to assist you in editing
           and enhancing images of government documents. Our app provides a
@@ -26,7 +29,7 @@ const About = () => {
           </p>
         ))}
       </div>
-    </div>
+    </AppLayout>
   );
 };
 

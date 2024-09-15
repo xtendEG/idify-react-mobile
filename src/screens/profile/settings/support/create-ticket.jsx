@@ -1,16 +1,14 @@
 import React from "react";
-import Heading from "../../../../components/common/heading";
 import Dropdown from "../../../../components/common/dropdown";
 import upload from "../../../../assets/images/settings/upload.svg";
 import { Button } from "../../../../components/common/button";
 import { useNavigate } from "react-router-dom";
-import SmallArrow from "../../../../components/common/small-arrow";
+import AppLayout from "../../../../components/common/app-layout";
 const CreateTicket = () => {
   const ticketTypes = ["Refund", "Report"];
   const navigate = useNavigate();
   return (
-    <div className="font-mona py-10 px-4 pb-4 ">
-      <Heading heading="Support Tickets" />
+    <AppLayout headingTitle={"Create Ticket"} headingBg={"bg-white"}>
       <div className="mt-5">
         <h2 className="text-5 font-medium mb-4">
           Create Ticket for your problem
@@ -20,12 +18,11 @@ const CreateTicket = () => {
             <div className="flex justify-between">
               <label className=" text-4 font-medium lead">Title</label>
               <Dropdown
-                btnClassName={
-                  "inline-flex items-center  justify-between w-full rounded-[21px]  px-3 py-1 bg-primary text-2 leading-[14.4px] tracking-[-0.24px] font-medium text-white focus:outline-none"
-                }
-                label={"Ticket Type"}
+                btnClassName="inline-flex items-center justify-between w-full rounded-[21px] px-3 py-1 bg-primary text-2 leading-[14.4px] tracking-[-0.24px] font-medium text-white focus:outline-none"
+                label="Ticket Type"
                 options={ticketTypes}
-                menuClassName={"w-full top-[calc(100%+6px)]"}
+                menuClassName="w-full top-[calc(100%+6px)]"
+                onChange={(selectedOption) => console.log(selectedOption)}
               />
             </div>
             <input
@@ -73,7 +70,7 @@ const CreateTicket = () => {
           </div>{" "}
         </form>
       </div>
-    </div>
+    </AppLayout>
   );
 };
 

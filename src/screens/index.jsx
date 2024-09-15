@@ -1,4 +1,7 @@
 export { default as Start } from "./start";
+export { default as Welcome } from "./start/welcome";
+export { default as ChooseLanguage } from "./start/choose-language";
+export { default as Steps } from "./start/steps";
 
 export { default as Home } from "./home";
 
@@ -31,3 +34,8 @@ export { default as Rotate } from "./camera/edit/rotate";
 export { default as Crop } from "./camera/edit/crop";
 export { default as Adjust } from "./camera/edit/adjust";
 export { default as Enhance } from "./camera/edit/enhance";
+
+export { default as Checkout } from "./checkout";
+export { default as Payment } from "./checkout/payment";
+export { default as Invoice } from "./checkout/invoice";
+export { default as ViewPhoto } from "./checkout/view-photo";
