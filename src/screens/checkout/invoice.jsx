@@ -127,7 +127,7 @@ const Invoice = () => {
                 <th className="font-medium py-2 text-start w-1/6">
                   Unit Price
                 </th>
-                <th className="font-medium py-2 pe-8 text-right w-1/6">
+                <th className="font-medium py-2 pe-8 text-start w-1/6">
                   Total
                 </th>
               </tr>
@@ -147,7 +147,7 @@ const Invoice = () => {
                   <td className="py-2 text-start w-1/6">
                     ${service.unit_price}
                   </td>
-                  <td className="py-2 text-center w-1/6">
+                  <td className="py-2 text-start w-1/6">
                     ${service.total_price}
                   </td>
                 </tr>

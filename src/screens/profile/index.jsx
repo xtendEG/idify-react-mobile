@@ -94,13 +94,7 @@ export const Switching = () => {
   return (
     <button
       onClick={toggleSwitch}
-      style={{
-        background: "none",
-        border: "none",
-        padding: 0,
-        cursor: "pointer",
-        display: "inline-block",
-      }}
+      className="bg-none border-none p-0 m-0 cursor-pointer inline-block"
     >
       <svg xmlns="http://www.w3.org/2000/svg" width="57" height="43" viewBox="0 0 57 43" fill="none">
         <g id={isOn ? "State=On" : "State=Off"}>
