@@ -115,7 +115,7 @@ export const Switching = () => {
           />
           <g id="Ellipse 111" filter="url(#filter0_dd_113_4142)">
             <circle
-              cx={isOn ? "35.5" : "21.5"}
+              cx={isOn ? "33.4" : "21.5"}
               cy="18.5"
               r="13.5"
               fill="white"

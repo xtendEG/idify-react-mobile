@@ -81,7 +81,7 @@ export const Actions = () => {
       <button className={`${classes} text-primary border-[1px] border-primary`}>
         Decline
       </button>
-      <button className={`${classes} bg-primary active:bg-secondary transition-all duration-150 text-white active:bg-secondary transition-all duration-150`}>Accept</button>
+      <button className={`${classes} bg-primary active:bg-secondary transition-all duration-150 text-white `}>Accept</button>
     </div>
   );
 };

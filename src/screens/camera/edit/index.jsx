@@ -71,7 +71,8 @@ const Edit = () => {
         {samePageEdit.open && samePageEdit.actionName === "Resize" && (
           <Resize />
         )}
-        <div className="flex items-start gap-6 overflow-x-auto py-1 h-fit">
+       <div className="overflow-x-auto">
+       <div className="flex items-start gap-6 w-fit mx-auto py-1 h-fit">
           {editOptions.map((option) => (
             <ActionBox
               key={option.actionName}
@@ -90,6 +91,7 @@ const Edit = () => {
             />
           ))}
         </div>
+       </div>
         {samePageEdit.open && <Footer action={samePageEdit.actionName} />}
       </div>
     </div>

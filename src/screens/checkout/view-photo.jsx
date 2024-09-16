@@ -8,7 +8,7 @@ const ViewPhoto = () => {
   return (
     <AppLayout headingTitle={"View Photo"} headingBg={"bg-white"}>
        <div className="mt-10">
-       <div className='border-[1px] border-gray-300'>
+       <div className='border-[1px] border-gray-300 flex justify-center'>
           <img src={person} alt="person" />
         </div>
         <div className=" space-y-5 mt-12">

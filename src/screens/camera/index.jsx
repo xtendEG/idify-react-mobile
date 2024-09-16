@@ -58,7 +58,8 @@ const Camera = () => {
         <Angle className="absolute top-0 right-0 rotate-[90deg]" />
       </div>
       <div className="bg-secondary py-10 px-2">
-        <div className="flex items-center gap-[28px] overflow-auto">
+       <div className="overflow-x-auto">
+       <div className="flex items-center gap-[28px] w-fit mx-auto">
           {imageSizes.map((size) => (
             <ActionBox
             key={size.size}
@@ -71,6 +72,7 @@ const Camera = () => {
             />
           ))}
         </div>
+       </div>
         <button
           onClick={() => navigate("/camera/preview")}
           className="relative mt-10 mb-2 mx-auto flex items-center justify-center"

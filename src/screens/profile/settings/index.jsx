@@ -115,7 +115,7 @@ const Settings = () => {
         ))}
         <div
           onClick={() => setIsDialogOpen(true)}
-          className="flex items-center justify-between px-5 py-4 rounded-[10px] bg-[#F6F7F8] mb-3"
+          className="flex items-center justify-between cursor-pointer px-5 py-4 rounded-[10px] bg-[#F6F7F8] mb-3"
         >
           <div className="flex items-center gap-2">
             <img src={deleteIcon} alt="" />
