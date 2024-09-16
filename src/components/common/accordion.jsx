@@ -34,6 +34,7 @@ const AccordionItem = ({ titleSection, content, isOpen, onToggle,contentLink }) 
         style={{ maxHeight: isOpen ? `${contentHeight}px` : "0px" }}
         aria-hidden={!isOpen}
       >
+        <div className="w-full h-[1px] bg-[#D7D7D7] mb-4"></div>
         {content}
 
         {contentLink}
