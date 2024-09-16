@@ -31,7 +31,7 @@ const Help = () => {
       headingBg={"bg-white"}
       childrenClassName={"pb-20"}
     >
-      <div className="mt-5 font-light text-3 leading-[30px] ">
+      <div className="mt-5 font-light text-3 leading-[30px] pb-[60px] ">
         <p>
           Welcome to the Help & Support section. We're here to assist you and
           provide answers to commonly asked questions. If you can't find the
@@ -73,6 +73,8 @@ const Help = () => {
             highly appreciated and helps us shape the future of the app.
           </p>
         </div>
+        <div className="fixed bottom-0 left-0 right-0  bg-custom-gradient h-[138px]"></div>
+
       </div>
     </AppLayout>
   );

@@ -10,12 +10,8 @@ const About = () => {
     "Legal Compliance: It's important to note that Idify is intended for personal use only and must be used in accordance with applicable laws and regulations. Using edited documents for fraudulent purposes or any illegal activities is strictly prohibited. We encourage users to familiarize themselves with the guidelines provided by relevant authorities regarding the use and acceptability of edited documents.",
   ];
   return (
-    <AppLayout
-      headingTitle={"About"}
-      headingBg={"bg-white"}
- 
-    >
-       <div className="mt-5 font-light text-3 leading-[30px]">
+    <AppLayout headingTitle={"About"} headingBg={"bg-white"}>
+      <div className="mt-5 font-light text-3 leading-[30px] pb-[90px]">
         <p>
           Idify is a secure mobile application designed to assist you in editing
           and enhancing images of government documents. Our app provides a
@@ -28,6 +24,7 @@ const About = () => {
             {index + 1}. {item}
           </p>
         ))}
+        <div className="fixed bottom-0 left-0 right-0  bg-custom-gradient h-[138px]"></div>
       </div>
     </AppLayout>
   );

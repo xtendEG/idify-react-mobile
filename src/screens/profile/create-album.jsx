@@ -34,6 +34,8 @@ const CreateAlbum = () => {
                 "w-full flex items-center justify-between rounded-[10px] p-3 bg-white text-4  font-medium border-[1px] border-[1px] border-[#D7D7D7] "
               }
               menuClassName={"top-[calc(100%+6px)] w-full"}
+              showArrow={true}
+              arrowFill="black"
             />
           </div>
           <div>
@@ -46,6 +48,8 @@ const CreateAlbum = () => {
                 "w-full flex items-center justify-between rounded-[10px] p-3 bg-white text-4  font-medium border-[1px] border-[1px] border-[#D7D7D7] "
               }
               menuClassName={"top-[calc(100%+6px)] w-full"}
+              showArrow={true}
+              arrowFill="black"
             />
           </div>
           <div>

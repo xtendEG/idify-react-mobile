@@ -1,46 +1,73 @@
+import React from 'react';
+
 const StructuredTextDisplay = ({ text, className }) => {
-    const formatText = (inputText) => {
-      const lines = inputText.split('\n');
-      
-      let formattedHtml = '';
-      let inList = false;
-  
-      lines.forEach(line => {
-        line = line.trim();
-        if (line.match(/^[a-z]\./)) {
-          // This is a main point (e.g., "a.")
-          if (inList) {
-            formattedHtml += '</ul>';
-            inList = false;
-          }
-          formattedHtml += `<p className="font-medium mt-2">${line}</p>`;
-        } else if (line.startsWith('•')) {
-          // This is a bullet point
-          if (!inList) {
-            formattedHtml += '<ul className="list-disc pl-5 mt-1">';
-            inList = true;
-          }
-          formattedHtml += `<li class="ps-1">• ${line.substring(1).trim()}</li>`;
-        } else if (line) {
-          // This is regular text
-          if (inList) {
-            formattedHtml += '</ul>';
-            inList = false;
-          }
-          formattedHtml += `<p>${line}</p>`;
+
+  // Helper function to render formatted JSX based on the input text.
+  const formatText = (inputText) => {
+    const lines = inputText.split('\n');
+    const elements = [];
+    let inList = false;
+    let listItems = [];
+
+    lines.forEach((line, index) => {
+      line = line.trim();
+
+      if (line.match(/^[a-z]\./)) {
+        // Main point (e.g., "a.")
+        if (inList) {
+          elements.push(
+            <ul className="list-disc pl-5 mt-1" key={`list-${index}`}>
+              {listItems}
+            </ul>
+          );
+          inList = false;
+          listItems = [];
         }
-      });
-  
-      if (inList) {
-        formattedHtml += '</ul>';
+        elements.push(
+          <p className="font-medium mt-2" key={`point-${index}`}>{line}</p>
+        );
+      } else if (line.startsWith('•')) {
+        // Bullet point
+        if (!inList) {
+          inList = true;
+        }
+        listItems.push(
+          <li className="ps-1" key={`bullet-${index}`}> {line.substring(1).trim()}</li>
+        );
+      } else if (line) {
+        // Regular text
+        if (inList) {
+          elements.push(
+            <ul className="list-disc pl-5 mt-1" key={`list-${index}`}>
+              {listItems}
+            </ul>
+          );
+          inList = false;
+          listItems = [];
+        }
+        elements.push(
+          <p key={`text-${index}`}>{line}</p>
+        );
       }
-  
-      return formattedHtml;
-    };
-  
-    return (
-      <div className={className} dangerouslySetInnerHTML={{ __html: formatText(text) }} />
-    );
+    });
+
+    // Push any remaining list items
+    if (inList) {
+      elements.push(
+        <ul className="list-disc pl-5 mt-1" key="remaining-list">
+          {listItems}
+        </ul>
+      );
+    }
+
+    return elements;
   };
-  
-  export default StructuredTextDisplay;
+
+  return (
+    <div className={className}>
+      {formatText(text)}
+    </div>
+  );
+};
+
+export default StructuredTextDisplay;
